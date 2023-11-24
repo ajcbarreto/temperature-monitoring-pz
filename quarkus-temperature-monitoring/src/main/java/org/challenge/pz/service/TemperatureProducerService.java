@@ -16,7 +16,7 @@ public class TemperatureProducerService {
     private final Random random = new Random();
 
     // Scheduled method to produce temperature data and send it to Kafka every 5 minutes
-    @Scheduled(every="20s")
+    @Scheduled(every="5m")
     public void produceTemperature() {
         String city = getRandomCity(); 
         Integer temperature = generateRandomTemperature();     
