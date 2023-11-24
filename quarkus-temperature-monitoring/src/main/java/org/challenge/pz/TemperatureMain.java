@@ -1,16 +1,12 @@
 package org.challenge.pz;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.core.MediaType;
+import io.quarkus.runtime.Quarkus;
+import io.quarkus.runtime.annotations.QuarkusMain;
 
-@Path("/hello")
+@QuarkusMain
 public class TemperatureMain {
 
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello from RESTEasy Reactive";
+    public static void main(String ... args) {
+        Quarkus.run(args); 
     }
 }
